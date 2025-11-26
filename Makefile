@@ -6,7 +6,7 @@
 #    By: abaoni <awos.baoni@learner.42.tech>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/26 20:26:27 by abaoni            #+#    #+#              #
-#    Updated: 2025/11/26 21:34:53 by abaoni           ###   ########.fr        #
+#    Updated: 2025/11/26 21:52:34 by abaoni           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
-	  ft_isprint.c ft_memset.c ft_strlen.c
+	  ft_isprint.c ft_memset.c ft_strlen.c ft_bzero.c
 
 HEADER = libft.h
 
