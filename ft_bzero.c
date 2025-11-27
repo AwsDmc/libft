@@ -6,14 +6,14 @@
 /*   By: abaoni <awos.baoni@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 21:47:14 by abaoni            #+#    #+#             */
-/*   Updated: 2025/11/26 21:50:11 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/11/27 20:52:14 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
