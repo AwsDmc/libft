@@ -6,13 +6,13 @@
 /*   By: abaoni <awos.baoni@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 16:50:44 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/01 13:19:34 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/05 18:20:54 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

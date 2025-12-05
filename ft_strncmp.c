@@ -6,7 +6,7 @@
 /*   By: abaoni <abaoni@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:34:06 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/01 13:18:44 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/05 18:12:20 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
+	size_t			i;
 
+	ptr1 = (unsigned char *) s1;
+	ptr2 = (unsigned char *) s2;
 	i = 0;
-	while (i < n && s1[i] && s2[i])
+	while (i < n)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		if (ptr1[i] != ptr2[i])
+			return (ptr1[i] - ptr2[i]);
 		i++;
 	}
-	return (0);
+	return (ptr1[i] - ptr2[i]);
 }

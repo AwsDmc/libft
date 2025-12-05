@@ -6,12 +6,11 @@
 /*   By: abaoni <awos.baoni@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:52:39 by abaoni            #+#    #+#             */
-/*   Updated: 2025/11/27 18:11:48 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/05 18:18:38 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t len)
 {

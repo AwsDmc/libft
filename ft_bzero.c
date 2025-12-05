@@ -6,11 +6,10 @@
 /*   By: abaoni <awos.baoni@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 21:47:14 by abaoni            #+#    #+#             */
-/*   Updated: 2025/11/27 20:52:14 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/05 18:17:39 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

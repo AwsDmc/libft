@@ -6,23 +6,24 @@
 /*   By: abaoni <awos.baoni@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 20:50:44 by abaoni            #+#    #+#             */
-/*   Updated: 2025/11/27 21:09:31 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/05 18:19:53 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t dest_size)
 {
 	size_t	src_len;
 	size_t	dest_len;
+	size_t	og_dest_len;
 	size_t	i;
 
 	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dest);
+	og_dest_len = st_strlen(dest);
 	if (dest_len >= dest_size || dest_size == 0)
-		return (dest_len + src_len);
+		return (og_dest_len + src_len);
 	i = 0;
 	while (dest_len < dest_size - 1)
 	{
@@ -33,5 +34,5 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dest_size)
 		dest_len++;
 	}
 	dest[dest_len] = '\0';
-	return (dest_len + src_len);
+	return (og_dest_len + src_len);
 }

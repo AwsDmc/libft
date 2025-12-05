@@ -6,7 +6,7 @@
 /*   By: abaoni <abaoni@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 11:04:51 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/01 11:37:17 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/05 18:08:34 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
+	unsigned char	*ptr;
 	unsigned char	ch;
 	size_t			len;
 
+	ptr = (unsigned char *) s;
 	ch = (unsigned char) c;
 	len = ft_strlen(s);
 	while (len > 0)

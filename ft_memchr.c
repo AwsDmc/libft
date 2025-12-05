@@ -6,18 +6,17 @@
 /*   By: abaoni <abaoni@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 13:43:15 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/01 14:27:17 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/05 18:18:15 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
 	unsigned char	ch;
-	size_t		i;
+	size_t			i;
 
 	str = (unsigned char *)s;
 	ch = (unsigned char) c;
@@ -28,7 +27,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)&str[i]);
 		i++;
 	}
-	if (str[i] == ch)
-		return ((void *)&str[i]);
 	return (NULL);
 }
