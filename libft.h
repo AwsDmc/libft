@@ -6,7 +6,7 @@
 /*   By: abaoni <awos.baoni@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 16:50:44 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/05 18:20:54 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/05 19:23:21 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -31,5 +31,7 @@ int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 #endif
