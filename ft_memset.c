@@ -6,7 +6,7 @@
 /*   By: abaoni <awos.baoni@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 20:04:22 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/05 18:19:30 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/05 18:22:52 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memset(void *ptr, int c, size_t len)
 	ch = (unsigned char)c;
 	while (i < len)
 	{
-		helper[i] = c;
+		helper[i] = ch;
 		i++;
 	}
 	return (ptr);

@@ -6,7 +6,7 @@
 /*   By: abaoni <abaoni@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 11:04:51 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/05 18:08:34 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/05 18:25:10 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ char	*ft_strrchr(const char *s, int c)
 	len = ft_strlen(s);
 	while (len > 0)
 	{
-		if (s[len] == ch)
-			return ((char *)&s[len]);
+		if (ptr[len] == ch)
+			return ((char *)&ptr[len]);
 		len--;
 	}
 	if (s[len] == ch)
-		return ((char *)&s[len]);
+		return ((char *)&ptr[len]);
 	return (NULL);
 }

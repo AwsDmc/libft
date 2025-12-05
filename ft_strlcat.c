@@ -6,7 +6,7 @@
 /*   By: abaoni <awos.baoni@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 20:50:44 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/05 18:19:53 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/05 18:23:24 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dest_size)
 
 	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dest);
-	og_dest_len = st_strlen(dest);
+	og_dest_len = ft_strlen(dest);
 	if (dest_len >= dest_size || dest_size == 0)
 		return (og_dest_len + src_len);
 	i = 0;
