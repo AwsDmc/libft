@@ -6,7 +6,7 @@
 /*   By: abaoni <abaoni@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 12:34:06 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/05 18:12:20 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/09 20:51:18 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (ptr1[i] != ptr2[i])
 			return (ptr1[i] - ptr2[i]);
+		if (ptr1[i] == '\0')
+			return (0);
 		i++;
 	}
-	return (ptr1[i] - ptr2[i]);
+	return (0);
 }

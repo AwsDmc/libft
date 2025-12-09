@@ -6,7 +6,7 @@
 /*   By: abaoni <abaoni@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 11:04:51 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/05 18:25:10 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/09 20:47:05 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)&ptr[len]);
 		len--;
 	}
-	if (s[len] == ch)
+	if (ptr[len] == ch)
 		return ((char *)&ptr[len]);
 	return (NULL);
 }
