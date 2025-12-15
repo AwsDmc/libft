@@ -1,41 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_iota.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaoni <awos.baoni@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/12 16:12:05 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/13 14:04:40 by abaoni           ###   ########.fr       */
+/*   Created: 2025/12/15 17:50:34 by abaoni            #+#    #+#             */
+/*   Updated: 2025/12/15 18:20:46 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+static	int	intlen(long n)
 {
-	char	*joined;
-	int		i;
-	int		j;
+	int	len;
 
-	if (!s1 || !s2)
-		return (NULL);
-	joined = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!joined)
-		return (NULL);
-	i = 0;
-	while (s1[i])
+	len = 0;
+	if (n < 0)
+		len++;
+	while (n)
 	{
-		joined[i] = s1[i];
-		i++;
+		n /= 10;
+		len++;
 	}
-	j = 0;
-	while (s2[j])
+	return (len);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	long	number;
+	int		len;
+
+	number = n;
+	if (number == 0)
+		return (ft_strdup("0"));
+	len = intlen(number);
+	str = malloc(len + 1);
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	if (number < 0)
 	{
-		joined[i] = s2[j];
-		j++;
-		i++;
+		str[0] = '-';
+		number = -number;
 	}
-	joined[i] = '\0';
-	return (joined);
+	while (number)
+	{
+		str[--len] = number % 10 + '0';
+		number /= 10;
+	}
+	return (str);
 }

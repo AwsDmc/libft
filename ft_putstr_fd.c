@@ -1,41 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaoni <awos.baoni@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/12 16:12:05 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/13 14:04:40 by abaoni           ###   ########.fr       */
+/*   Created: 2025/12/15 19:00:26 by abaoni            #+#    #+#             */
+/*   Updated: 2025/12/15 19:03:20 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char	*joined;
-	int		i;
-	int		j;
+	int	i;
 
-	if (!s1 || !s2)
-		return (NULL);
-	joined = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!joined)
-		return (NULL);
+	if (!s)
+		return ;
 	i = 0;
-	while (s1[i])
+	while (s[i])
 	{
-		joined[i] = s1[i];
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	j = 0;
-	while (s2[j])
-	{
-		joined[i] = s2[j];
-		j++;
-		i++;
-	}
-	joined[i] = '\0';
-	return (joined);
 }
