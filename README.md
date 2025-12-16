@@ -108,9 +108,8 @@ Linked list manipulation functions:
 ## Resources
 
 ### Documentation
-- C Standard Library Reference (https://en.cppreference.com/w/c)
-- Linux Man Pages (https://man7.org/linux/man-pages/)
-- The C Programming Language (K&R) by Brian Kernighan and Dennis Ritchie
+- C Standard Library Reference
+- Linux Man Pages
 
 ### AI Usage
 AI tools (such as ChatGPT or Claude) were used for the following tasks:
