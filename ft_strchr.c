@@ -6,7 +6,7 @@
 /*   By: abaoni <abaoni@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 10:09:50 by abaoni            #+#    #+#             */
-/*   Updated: 2025/12/09 20:57:23 by abaoni           ###   ########.fr       */
+/*   Updated: 2025/12/17 10:14:13 by abaoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t			i;
-	unsigned char	*ptr;
-	unsigned char	ch;
+	size_t				i;
+	const unsigned char	*ptr;
+	unsigned char		ch;
 
 	i = 0;
 	ch = (unsigned char) c;
-	ptr = (unsigned char *)s;
+	ptr = (const unsigned char *)s;
 	while (ptr[i])
 	{
 		if (ptr[i] == ch)

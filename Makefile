@@ -6,7 +6,7 @@
 #    By: abaoni <awos.baoni@learner.42.tech>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/26 20:26:27 by abaoni            #+#    #+#              #
-#    Updated: 2025/12/16 20:09:40 by abaoni           ###   ########.fr        #
+#    Updated: 2025/12/17 12:37:42 by abaoni           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,16 +35,12 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	@ar rcs $(NAME) $(OBJ)
-
-%.o: %.c $(HEADER)
-	@$(CC) $(CFLAGS) -c $< -o $@
-
+	ar rcs $(NAME) $(OBJ)
 clean:
-	@rm -f $(OBJ)
+	rm -f $(OBJ)
 
 fclean:
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
