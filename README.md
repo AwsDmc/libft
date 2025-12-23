@@ -36,7 +36,7 @@ To use libft in your project:
 
 2. Compile your project with the library:
 
-gcc your_file.c -L. -lft -o your_program
+cc your_file.c -L. -lft -o your_program
 
 ## Library Functions
 
