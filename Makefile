@@ -13,6 +13,7 @@
 NAME = libft.a
 
 CC = cc
+
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
@@ -27,15 +28,18 @@ SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 	  ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 	  ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-
 HEADER = libft.h
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME) : $(OBJ)
+%.o: %.c $(HEADER)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
+
 clean:
 	rm -f $(OBJ)
 
